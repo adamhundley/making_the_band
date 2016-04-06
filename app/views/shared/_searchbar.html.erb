@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 class="text-center">Search by City/State and Radius</h1>
+  <form role="form" action='/shows' method="get">
+    <div class="col-sm-3 col-sm-offset-3">
+      <div class="form-group" id="location" >
+        <label class="sr-only" for="location">Location</label>
+        <input type="text" name="[show][location]" class="form-control" id="location" value="<%= params[:show][:location] %>" placeholder="Enter City, State" required=>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="form-group">
+        <%= number_field_tag "[show][radius]", value=params[:show][:radius], class:"form-control form-control-success pull-left", max: 150 %>
+      </div>
+    </div>
+    <div class="col-sm-1">
+      <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+  </form>
+</div>

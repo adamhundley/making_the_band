@@ -1,3 +1,6 @@
+
+<%= render partial: "shared/searchbar" %>
+<%= render partial: "shared/map" %>
 <div class="container">
   <div class="row text-center">
     <div class="col-sm-5">
@@ -7,20 +10,21 @@
     <div class="col-sm-7">
     </div>
   </div>
-  <hr>
   <table class="table">
     <thead>
       <th>Date</th>
       <th>Artist</th>
       <th>Venue</th>
+      <th>Location</th>
       <th>Tickets</th>
       <th>RSVP</th>
     </thead>
     <% @shows.each do |show| %>
     <tr>
       <td><%= show.datetime %></td>
-      <td><%= show.artists.first[:name] %></td>
-      <td><%= show.venue[:name] %></td>
+      <td><%= show.artist %></td>
+      <td><%= show.venue_name %></td>
+      <td><%= show.city %>, <%= show.region %> </td>
       <td><%= link_to "Tickets", show.ticket_url, {target: "_blank"} %></td>
       <td><%= link_to "RSVP", show.url %></td>
     </tr>

@@ -1,12 +1,12 @@
 class ShowsController < ApplicationController
 
   def index
-    @shows = Show.find(location_params)
+    @shows = Show.find_by(show_params)
   end
 
 private
 
-  def location_params
-    params[:location][:name]
+  def show_params
+    params[:show]
   end
 end
