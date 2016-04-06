@@ -1,0 +1,26 @@
+<div class="hero-unit">
+  <div class="container hero-container">
+        <h1 class="text-center"><span class="landing-span">Who you wanna hear?</span></h1>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <%= form_tag('/artists', method:"get") do %>
+        <%= text_field :artist, :name, class:"form-control form-control-success", required: true %>
+        <%= submit_tag "FIND", class:"btn btn-success" %>
+      <% end %>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <h1 class="text-center">Where you wanna hear?</h1>
+    <div class="col-sm-4 col-sm-offset-4">
+      <%= form_tag("/shows", method:"get") do %>
+        <%= text_field :location, :name, class:"form-control form-control-success", required: true %>
+        <%= submit_tag "FIND", class:"btn btn-success" %>
+      <% end %>
+    </div>
+  </div>
+
+</div>

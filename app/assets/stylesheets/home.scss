@@ -1,0 +1,46 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.hero-unit {
+  background-image:url('https://images.unsplash.com/photo-1424296308064-1eead03d1ad9?crop=entropy&dpr=2&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1700');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height:450px;
+  margin-top: -5px;
+}
+
+.hero-unit a {
+  text-decoration: none;
+}
+
+.hero-unit a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.hero-unit h1 {
+  color: #000;
+  font-weight: bold;
+  font-size: 60px;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+.hero-unit h2 {
+  font-size: 25px;
+  color: #FFFFFF;
+}
+
+.hero-container h1 {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  filter: blur(77px);
+  transform: scale(1.47) translateY(60px);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}

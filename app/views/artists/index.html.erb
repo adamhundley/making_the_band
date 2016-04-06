@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row text-center">
+    <div class="col-sm-5">
+      <h1><%= @artist.name %></h1>
+      <%= image_tag @artist.thumb_url %>
+
+    </div>
+    <div class="col-sm-7">
+      <%= render partial: "shared/map" %>
+    </div>
+  </div>
+  <hr>
+  <table class="table">
+    <thead>
+      <th>Date</th>
+      <th>Title</th>
+      <th>Location</th>
+      <th>Tickets</th>
+      <th>RSVP</th>
+    </thead>
+    <% @shows.each do |show| %>
+    <tr>
+      <td><%= show.formatted_datetime %></td>
+      <td><%= show.title %></td>
+      <td><%= show.formatted_location %></td>
+      <td><%= link_to "Tickets", show.ticket_url, {target: "_blank"} %></td>
+      <td><%= link_to "RSVP", show["facebook_rsvp_url"] %></td>
+    </tr>
+    <% end %>
+  </table>

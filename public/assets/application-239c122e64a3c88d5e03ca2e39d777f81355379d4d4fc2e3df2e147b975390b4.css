@@ -1,0 +1,64 @@
+/* line 5, /Users/adamhundley/Turing/3module/projects/making_the_band_gem/making_the_band/app/assets/stylesheets/home.scss */
+.hero-unit {
+  background-image: url("https://images.unsplash.com/photo-1424296308064-1eead03d1ad9?crop=entropy&dpr=2&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1700");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 450px;
+  margin-top: -5px;
+}
+
+/* line 15, /Users/adamhundley/Turing/3module/projects/making_the_band_gem/making_the_band/app/assets/stylesheets/home.scss */
+.hero-unit a {
+  text-decoration: none;
+}
+
+/* line 19, /Users/adamhundley/Turing/3module/projects/making_the_band_gem/making_the_band/app/assets/stylesheets/home.scss */
+.hero-unit a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+/* line 24, /Users/adamhundley/Turing/3module/projects/making_the_band_gem/making_the_band/app/assets/stylesheets/home.scss */
+.hero-unit h1 {
+  color: #000;
+  font-weight: bold;
+  font-size: 60px;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+/* line 34, /Users/adamhundley/Turing/3module/projects/making_the_band_gem/making_the_band/app/assets/stylesheets/home.scss */
+.hero-unit h2 {
+  font-size: 25px;
+  color: #FFFFFF;
+}
+
+/* line 39, /Users/adamhundley/Turing/3module/projects/making_the_band_gem/making_the_band/app/assets/stylesheets/home.scss */
+.hero-container h1 {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  filter: blur(77px);
+  transform: scale(1.47) translateY(60px);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

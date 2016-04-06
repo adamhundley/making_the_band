@@ -1,0 +1,23 @@
+<ul class="nav pull-left user-cart">
+  <% if current_user %>
+    <li class="dropdown pull-right ">
+      <a href="#" data-toggle="dropdown" style="color:#777; margin-top: 5px;" class="dropdown-toggle"><%= image_tag current_user.image %></a>
+      <ul class="dropdown-menu">
+        <li class="name-in-dropdown">
+          Hey! <%= current_user.name %>!
+        </li>
+        <li>
+          <%= link_to "logout", logout_path, method: :delete %>
+        </li>
+      </ul>
+    </li>
+  <% else %>
+  <li class="pull-right nav-icon">
+      <%= link_to image_tag("http://i.stack.imgur.com/ZW4QC.png"), facebook_login_path %>
+  </li>
+  <li class="pull-right nav-icon">
+    <a id="login" href="/login" style="color:#777; margin-top: 5px;"><fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+      </fb:login-button></a>
+  </li>
+  <% end %>
+</ul>
