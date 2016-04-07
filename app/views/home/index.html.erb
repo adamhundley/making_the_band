@@ -9,7 +9,7 @@
         <% end %>
       </div>
       <div class="col-sm-4">
-        <%= form_tag("/shows", method:"get") do %>
+        <%= form_tag("/locations", method:"get") do %>
         <%= submit_tag "FIND BY LOCATION", class:"btn btn-success" %>
           <%= text_field :show, :location, class:"form-control form-control-success", placeholder:"City, State", required: true %>
         <% end %>

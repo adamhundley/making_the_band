@@ -13,11 +13,7 @@
     </li>
   <% else %>
   <li class="pull-right nav-icon">
-      <%= link_to image_tag("http://i.stack.imgur.com/ZW4QC.png"), facebook_login_path %>
-  </li>
-  <li class="pull-right nav-icon">
-    <a id="login" href="/login" style="color:#777; margin-top: 5px;"><fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-      </fb:login-button></a>
+      <%= link_to image_tag("http://i.stack.imgur.com/ZW4QC.png"), facebook_login_path, id:"login" %>
   </li>
   <% end %>
 </ul>

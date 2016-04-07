@@ -20,10 +20,14 @@ class Artist
 
   def self.find_by(name)
     show_data = service.artist(name)
-    artist = build_artist_object(show_data.first[:artists].first)
-    artist.shows = build_show_objects(show_data)
-    artist.geo_info = get_geo_info(artist.shows)
-    artist
+    if show_data.class != Array || show_data.empty?
+      "#{name.upcase} is not a real artist! Try again!"
+    else
+      artist = build_artist_object(show_data.first[:artists].first)
+      artist.shows = build_show_objects(show_data)
+      artist.geo_info = get_geo_info(artist.shows)
+      artist
+    end
   end
 
   private

@@ -1,6 +1,6 @@
 <div class="container">
-  <h1 class="text-center">Search by City/State, Radius or Date Range</h1>
-  <form role="form" action='/shows' method="get">
+  <h1 class="text-center searchbar_label">Search by City/State, Radius or Date Range</h1>
+  <form role="form" action='/locations' method="get">
     <div class="col-sm-3 col-sm-offset-1">
       <div class="form-group" id="location" >
         <input type="text" name="[show][location]" class="form-control" id="location" value="<%= params[:show][:location] %>" placeholder="Enter City, State" required=>
@@ -14,7 +14,8 @@
     <div class="col-sm-2">
         <div class="form-group">
           <div class="input-group">
-            <input type="text" class="form-control" name="[show][start]" id="checkin" value="<%= params[:show][:start] %>" placeholder="Start Date" required>
+            <input type="text" class="form-control" name="[show][start]" id="checkin" value="<%= params[:show][:start] %>" placeholder="Start Date" required="true
+            ">
             <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
           </div>
         </div>
@@ -22,7 +23,7 @@
       <div class="col-sm-2">
         <div class="form-group">
           <div class="input-group">
-            <input type="text" class="form-control" name="[show][end]" id="checkout" value="<%= params[:show][:end] %>" placeholder="End Date" required>
+            <input type="text" class="form-control" name="[show][end]" id="checkout" value="<%= params[:show][:end] %>" placeholder="End Date" required="true">
             <span class="input-group-addon" style="padding-right: 8px"><i class="glyphicon glyphicon-calendar"></i></span>
           </div>
         </div>

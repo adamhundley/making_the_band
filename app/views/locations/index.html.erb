@@ -1,0 +1,30 @@
+
+<%= render partial: "shared/location_searchbar" %>
+<div class="container">
+  <%= render partial: "shared/locations_map" %>
+  <table class="table table-striped shows">
+    <thead class="shows">
+      <tr class=shows>
+        <th class="date shows">Date</th>
+        <th class="artist shows">Artist</th>
+        <th class="venue shows">Venue</th>
+        <th class="location shows">Location</th>
+        <th class="tickets shows">Tickets</th>
+        <th class="rsvp shows">RSVP</th>
+      </tr>
+    </thead>
+    <tbody class="shows">
+      <% @location.shows.each do |show| %>
+      <tr class="shows">
+        <td class="date shows"><%= show.formatted_datetime %></td>
+        <td class="artist shows"><%= link_to show.artist, artists_path(artist: {artist: show.artist}) %></td>
+        <td class="venue shows"><%= show.venue_name %></td>
+        <td class="location shows"><%= show.city %>, <%= show.region %> </td>
+        <td class="tickets shows"><%= link_to "Tickets", show.ticket_url, {target: "_blank"} %></td>
+        <td class="rsvp"><%= link_to "RSVP", show.url %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+<hr>
+<hr>

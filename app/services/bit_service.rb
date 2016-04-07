@@ -4,7 +4,7 @@ class BitService
     connection.params['app_id'] = "making_the_band"
   end
 
-  def shows(params)
+  def location(params)
     parse(connection.get("/events/search.json?", params))
   end
 

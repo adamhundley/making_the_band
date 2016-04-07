@@ -10,9 +10,9 @@ RSpec.feature "UserLogsInWithFacebook", type: :feature do
     Capybara.app = MakingTheBand::Application
 
     visit '/'
-    click_on "Login"
+    click_link "login"
     assert page.has_content?("Horace")
-    assert page.has_link?("Logout")
-    
+    assert page.has_link?("logout")
+
   end
 end

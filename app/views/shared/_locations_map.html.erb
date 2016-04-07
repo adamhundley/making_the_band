@@ -1,0 +1,39 @@
+<script>
+
+  function initMap() {
+  var myLatLng = {lat: <%= @location.geo_info["lat"] %>, lng: <%= @location.geo_info["lng"] %>};
+  var shows = <%= @location.shows_geo_info %>
+
+  var map = new google.maps.Map(document.getElementById('artistGoogleMap'), {
+  center: myLatLng,
+  scrollwheel: false,
+  zoom: 11
+  });
+
+  for (i = 0; i < shows.length; i++) {
+          var new_location = {lat: shows[i][0], lng: shows[i][1] };
+
+          var image = { url: 'http://emojipedia-us.s3.amazonaws.com/cache/f2/50/f250a1ffc4a638d9ac7f611e08e26d04.png',
+          scaledSize: new google.maps.Size(35, 35)
+        };
+
+          let make_marker = new google.maps.Marker({
+             position: new_location,
+             map: map,
+             animation: google.maps.Animation.DROP,
+             icon: image
+            });
+
+        //  let infowindow = new google.maps.InfoWindow({
+        //    content: "shows"
+        //     });
+          make_marker.addListener('click', function() {
+            infowindow.open(map, make_marker);
+          });
+        }
+  }
+</script>
+
+<div id="artistGoogleMap" style="width:350;height:300px;"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdW9Nu_UP9yudAFp0Fv5_6Ut25ln2e3AY&callback=initMap&region=US" async defer></script>

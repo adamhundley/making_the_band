@@ -1,24 +1,32 @@
 class Location
   attr_reader :location
-  attr_accessor :shows, :geo_info, :shows_geo_info
+  attr_accessor :shows, :geo_info, :shows_geo_info, :titles
 
   def initialize(location)
     @location = location
     @shows = []
     @shows_geo_info = []
     @geo_info = []
+    @titles = []
   end
 
   def self.find_by(params)
     if !params[:start].nil?
       date_params(params)
     end
-    location_data = service.shows(params)
-    location = build_location_object(params[:location])
-    location.shows = build_show_objects(location_data)
-    location.shows_geo_info = get_geo_info(location.shows)
-    location.geo_info = set_geo_location(params[:location])
-    location
+    params[:per_page] = 100
+    location_data = service.location(params)
+
+    if location_data.class != Array
+      "#{params[:location].upcase} is not a real place! Try again!"
+    else
+      location = build_location_object(params[:location])
+      location.shows = build_show_objects(location_data)
+      location.shows_geo_info = get_geo_info(location.shows)
+      location.geo_info = set_geo_location(params[:location])
+      location.titles = find_titles(location.shows)
+      location
+    end
   end
 
   def self.service
@@ -51,4 +59,11 @@ private
       [show.venue_latitude, show.venue_longitude]
     end
   end
+
+  def self.find_titles(shows)
+    shows.map do |show|
+      show.artist
+    end
+  end
+
 end

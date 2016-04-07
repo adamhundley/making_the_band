@@ -1,29 +1,34 @@
 <div class="container">
   <%= render partial: "shared/artist_searchbar" %>
   <div class="row text-center">
-    <div class="col-sm-5">
-      <h1><%= link_to @artist.name, @artist.facebook_url %></h1>
+    <div class="col-sm-5 artist-info-name">
       <%= link_to image_tag(@artist.thumb_url), @artist.facebook_url %>
     </div>
-    <div class="col-sm-7">
+    <div class="col-sm-7 artist-info">
       <%= render partial: "shared/artist_map" %>
     </div>
   </div>
-  <table class="table">
-    <thead>
-      <th>Date</th>
-      <th>Venue</th>
-      <th>Location</th>
-      <th>Tickets</th>
-      <th>RSVP</th>
+
+  <table class="table table-striped shows">
+    <thead class="shows">
+      <tr class="shows">
+        <th class="artist_date shows">Date</th>
+        <th class="artist_venue shows">Venue</th>
+        <th class="artist_location shows">Location</th>
+        <th class="artist_tickets shows">Tickets</th>
+        <th class="artist_rsvp shows">RSVP</th>
+      </tr>
     </thead>
-    <% @artist.shows.each do |show| %>
-    <tr>
-      <td><%= show.formatted_datetime %></td>
-      <td><%= show.venue_name %></td>
-      <td><%= show.formatted_location %></td>
-      <td><%= link_to "Tickets", show.ticket_url %></td>
-      <td><%= link_to "RSVP", show.facebook_rsvp_url %></td>
-    </tr>
-    <% end %>
+    <tbody class="shows">
+      <% @artist.shows.each do |show| %>
+      <tr class="shows">
+        <td class="artist_date shows"><%= show.formatted_datetime %></td>
+        <td class="artist_venue shows"><%= show.venue_name %></td>
+        <td class="artist_location shows"><%= show.formatted_location %></td>
+        <td class="artist_tickets shows"><%= link_to "Tickets", show.ticket_url %></td>
+        <td class="artist_rsvp shows"><%= link_to "RSVP", show.facebook_rsvp_url %></td>
+      </tr>
+      <% end %>
+    </tbody>
   </table>
+  <hr>

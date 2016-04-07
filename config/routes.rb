@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get '/auth/facebook', as: :facebook_login
   get '/auth/facebook/callback', to: 'sessions#create'
   delete "/logout", to: "sessions#destroy"
-  get "/shows", to: "shows#index"
+  get "/locations", to: "locations#index"
 end

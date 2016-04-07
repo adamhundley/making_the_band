@@ -1,6 +1,10 @@
 class ArtistsController < ApplicationController
   def index
     @artist = Artist.find_by(artist_params)
+    if @artist.class == String
+      flash[:alert] = "#{@artist}"
+      redirect_to request.referer
+    end
   end
 
 private

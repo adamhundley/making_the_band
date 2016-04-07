@@ -1,0 +1,754 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://127.0.0.1:59884/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.1/2015-02-26)
+      Date:
+      - Thu, 07 Apr 2016 17:11:57 GMT
+      Content-Length:
+      - '14'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70336696877960'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:11:57 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9516/session
+    body:
+      encoding: UTF-8
+      string: '{"desiredCapabilities":{"browserName":"chrome","version":"","platform":"ANY","javascriptEnabled":true,"cssSelectorsEnabled":true,"takesScreenshot":false,"nativeEvents":false,"rotatable":false,"loggingPrefs":{"browser":"ALL","driver":"ALL"},"chromeOptions":{"detach":true},"chrome.detach":true}}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '294'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '704'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"4a74af758e2c6af93a5b3db7c4a13f53","status":0,"value":{"acceptSslCerts":true,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"browserName":"chrome","chrome":{"chromedriverVersion":"2.21.371459
+        (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4)","userDataDir":"/var/folders/ks/9w0lzhzs4pz16gmd7mk7kjm40000gn/T/.org.chromium.Chromium.po9Ry0"},"cssSelectorsEnabled":true,"databaseEnabled":false,"handlesAlerts":true,"hasTouchScreen":false,"javascriptEnabled":true,"locationContextEnabled":true,"mobileEmulationEnabled":false,"nativeEvents":true,"platform":"Mac
+        OS X","rotatable":false,"takesHeapSnapshot":true,"takesScreenshot":true,"version":"49.0.2623.110","webStorageEnabled":true}}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:11:59 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9516/session/4a74af758e2c6af93a5b3db7c4a13f53/url
+    body:
+      encoding: UTF-8
+      string: '{"url":"http://127.0.0.1:59884/"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '33'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"4a74af758e2c6af93a5b3db7c4a13f53","status":0,"value":null}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:01 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9516/session/4a74af758e2c6af93a5b3db7c4a13f53/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//*[self::input | self::textarea][not(./@type
+        = ''submit'' or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox''
+        or ./@type = ''hidden'' or ./@type = ''file'')][(((./@id = ''City, State''
+        or ./@name = ''City, State'') or ./@placeholder = ''City, State'') or ./@id
+        = //label[normalize-space(string(.)) = ''City, State'']/@for)] | .//label[normalize-space(string(.))
+        = ''City, State'']//.//*[self::input | self::textarea][not(./@type = ''submit''
+        or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox'' or
+        ./@type = ''hidden'' or ./@type = ''file'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '577'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '105'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"4a74af758e2c6af93a5b3db7c4a13f53","status":0,"value":[{"ELEMENT":"0.01964470655821926-1"}]}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:01 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9516/session/4a74af758e2c6af93a5b3db7c4a13f53/element/0.01964470655821926-1/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"4a74af758e2c6af93a5b3db7c4a13f53","status":0,"value":true}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:01 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9516/session/4a74af758e2c6af93a5b3db7c4a13f53/element/0.01964470655821926-1/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"4a74af758e2c6af93a5b3db7c4a13f53","status":0,"value":true}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:01 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9516/session/4a74af758e2c6af93a5b3db7c4a13f53/element/0.01964470655821926-1/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '75'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"4a74af758e2c6af93a5b3db7c4a13f53","status":0,"value":"input"}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:01 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9516/session/4a74af758e2c6af93a5b3db7c4a13f53/element/0.01964470655821926-1/attribute/type
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '74'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"4a74af758e2c6af93a5b3db7c4a13f53","status":0,"value":"text"}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:01 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9516/session/4a74af758e2c6af93a5b3db7c4a13f53/element/0.01964470655821926-1/attribute/readonly
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"4a74af758e2c6af93a5b3db7c4a13f53","status":0,"value":null}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:01 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9516/session/4a74af758e2c6af93a5b3db7c4a13f53/execute
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].value = ''''","args":[{"ELEMENT":"0.01964470655821926-1","element-6066-11e4-a52e-4f735466cecf":"0.01964470655821926-1"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '143'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"4a74af758e2c6af93a5b3db7c4a13f53","status":0,"value":null}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:01 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9516/session/4a74af758e2c6af93a5b3db7c4a13f53/element/0.01964470655821926-1/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["Denver, CO"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '24'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"4a74af758e2c6af93a5b3db7c4a13f53","status":0,"value":null}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:01 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9516/session/4a74af758e2c6af93a5b3db7c4a13f53/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//a[./@href][(((./@id = ''FIND BY LOCATION''
+        or normalize-space(string(.)) = ''FIND BY LOCATION'') or ./@title = ''FIND
+        BY LOCATION'') or .//img[./@alt = ''FIND BY LOCATION''])] | .//input[./@type
+        = ''submit'' or ./@type = ''reset'' or ./@type = ''image'' or ./@type = ''button''][((./@id
+        = ''FIND BY LOCATION'' or ./@value = ''FIND BY LOCATION'') or ./@title = ''FIND
+        BY LOCATION'')] | .//input[./@type = ''image''][./@alt = ''FIND BY LOCATION'']
+        | .//button[(((./@id = ''FIND BY LOCATION'' or ./@value = ''FIND BY LOCATION'')
+        or normalize-space(string(.)) = ''FIND BY LOCATION'') or ./@title = ''FIND
+        BY LOCATION'')] | .//input[./@type = ''image''][./@alt = ''FIND BY LOCATION'']"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '672'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '105'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"4a74af758e2c6af93a5b3db7c4a13f53","status":0,"value":[{"ELEMENT":"0.01964470655821926-2"}]}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:01 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9516/session/4a74af758e2c6af93a5b3db7c4a13f53/element/0.01964470655821926-2/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"4a74af758e2c6af93a5b3db7c4a13f53","status":0,"value":true}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:01 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9516/session/4a74af758e2c6af93a5b3db7c4a13f53/element/0.01964470655821926-2/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '75'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"4a74af758e2c6af93a5b3db7c4a13f53","status":0,"value":"input"}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:01 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9516/session/4a74af758e2c6af93a5b3db7c4a13f53/element/0.01964470655821926-2/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"4a74af758e2c6af93a5b3db7c4a13f53","status":0,"value":true}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:01 GMT
+- request:
+    method: get
+    uri: http://api.bandsintown.com/events/search.json?app_id=making_the_band&location=Denver,%20CO
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 07 Apr 2016 17:12:02 GMT
+      Etag:
+      - '"5fcc05b0f01eb97bc0036b5ab1118551"'
+      Server:
+      - nginx
+      X-Runtime:
+      - '288'
+      Content-Length:
+      - '33661'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |
+        [{"id":11366998,"url":"http://www.bandsintown.com/event/11366998?app_id=making_the_band","datetime":"2016-04-07T00:00:00","ticket_url":"http://www.bandsintown.com/event/11366998/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Chain Station","url":"http://www.bandsintown.com/ChainStation","mbid":null}],"venue":{"id":1160773,"url":"http://www.bandsintown.com/venue/1160773","name":"Bluebird Theatre","city":"Denver","region":"CO","country":"United States","latitude":39.740281,"longitude":-104.948382},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11219053,"url":"http://www.bandsintown.com/event/11219053?app_id=making_the_band","datetime":"2016-04-07T09:30:00","ticket_url":"http://www.bandsintown.com/event/11219053/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Public Tour","url":"http://www.bandsintown.com/PublicTour","mbid":null}],"venue":{"id":1398636,"url":"http://www.bandsintown.com/venue/1398636","name":"Cherokee Ranch","city":"Sedalia","region":"CO","country":"United States","latitude":39.4576235,"longitude":-104.938246},"ticket_status":"available","on_sale_datetime":null},
+        {"id":11810804,"url":"http://www.bandsintown.com/event/11810804?app_id=making_the_band","datetime":"2016-04-07T12:15:00","ticket_url":"http://www.bandsintown.com/event/11810804/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Epic Proportions Tour","url":"http://www.bandsintown.com/EpicProportionsTour","mbid":null},{"name":"Racing On The Sun","url":"http://www.bandsintown.com/RacingOnTheSun","mbid":null},{"name":"Gabe Kubanda","url":"http://www.bandsintown.com/GabeKubanda","mbid":null}],"venue":{"id":3230558,"url":"http://www.bandsintown.com/venue/3230558","name":"Jefferson Sr/Jr High","city":"Edgewater","region":"CO","country":"United States","latitude":39.7530556,"longitude":-105.0636111},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11824541,"url":"http://www.bandsintown.com/event/11824541?app_id=making_the_band","datetime":"2016-04-07T13:00:00","ticket_url":"http://www.bandsintown.com/event/11824541/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"DJ Cavem","url":"http://www.bandsintown.com/DjCavem","mbid":null}],"venue":{"id":3281869,"url":"http://www.bandsintown.com/venue/3281869","name":"Natural Grocers","city":"Aurora","region":"CO","country":"United States","latitude":39.6538925,"longitude":-104.7720184},"ticket_status":"available","on_sale_datetime":null},
+        {"id":11811290,"url":"http://www.bandsintown.com/event/11811290?app_id=making_the_band","datetime":"2016-04-07T13:00:00","ticket_url":"http://www.bandsintown.com/event/11811290/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Empra","url":"http://www.bandsintown.com/Empra","mbid":null}],"venue":{"id":3278451,"url":"http://www.bandsintown.com/venue/3278451","name":"Jefferson High","city":"Denver","region":"CO","country":"United States","latitude":39.7391667,"longitude":-104.9841667},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11689625,"url":"http://www.bandsintown.com/event/11689625?app_id=making_the_band","datetime":"2016-04-07T18:00:00","ticket_url":"http://www.bandsintown.com/event/11689625/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"The Spirituals Project Choir Concert","url":"http://www.bandsintown.com/TheSpiritualsProjectChoirConcert","mbid":null},{"name":"\"Walk Together Children\"","url":"http://www.bandsintown.com/%22walkTogetherChildren%22","mbid":null}],"venue":{"id":996919,"url":"http://www.bandsintown.com/venue/996919","name":"University Park United Methodist Church","city":"Denver","region":"CO","country":"United States","latitude":39.6769447,"longitude":-104.9586639},"ticket_status":"available","on_sale_datetime":null},
+        {"id":11784131,"url":"http://www.bandsintown.com/event/11784131?app_id=making_the_band","datetime":"2016-04-07T18:00:00","ticket_url":"http://www.bandsintown.com/event/11784131/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"My Form Zumba","url":"http://www.bandsintown.com/MyFormZumba","mbid":null}],"venue":{"id":3183296,"url":"http://www.bandsintown.com/venue/3183296","name":"Countryside Village","city":"Longmont","region":"CO","country":"United States","latitude":40.1396861,"longitude":-105.0972983},"ticket_status":"available","on_sale_datetime":null},
+        {"id":11427849,"url":"http://www.bandsintown.com/event/11427849?app_id=making_the_band","datetime":"2016-04-07T18:30:00","ticket_url":"http://www.bandsintown.com/event/11427849/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Mike Lucus","url":"http://www.bandsintown.com/MikeLucus","mbid":null},{"name":"Rick Mongrain","url":"http://www.bandsintown.com/RickMongrain","mbid":null}],"venue":{"id":2977525,"url":"http://www.bandsintown.com/venue/2977525","name":"North High School","city":"Denver","region":"CO","country":"United States","latitude":39.7592468,"longitude":-105.0201187},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11278635,"url":"http://www.bandsintown.com/event/11278635?app_id=making_the_band","datetime":"2016-04-07T19:00:00","ticket_url":"http://www.bandsintown.com/event/11278635/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Infected Mushroom","url":"http://www.bandsintown.com/InfectedMushroom","mbid":"eab76c9f-ff91-4431-b6dd-3b976c598020"}],"venue":{"id":9767,"url":"http://www.bandsintown.com/venue/9767","name":"Boulder Theater","city":"Boulder","region":"CO","country":"United States","latitude":40.018845,"longitude":-105.277326},"ticket_status":"available","on_sale_datetime":null},
+        {"id":11019572,"url":"http://www.bandsintown.com/event/11019572?app_id=making_the_band","datetime":"2016-04-07T19:00:00","ticket_url":"http://www.bandsintown.com/event/11019572/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"VoicePlay","url":"http://www.bandsintown.com/VoicePlay","mbid":null}],"venue":{"id":3099500,"url":"http://www.bandsintown.com/venue/3099500","name":"Gateway High School","city":"Aurora","region":"CO","country":"United States","latitude":39.693822,"longitude":-104.8173983},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11658045,"url":"http://www.bandsintown.com/event/11658045?app_id=making_the_band","datetime":"2016-04-07T19:00:00","ticket_url":"http://www.bandsintown.com/event/11658045/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"HomeVibe Presents","url":"http://www.bandsintown.com/HomevibePresents","mbid":null}],"venue":{"id":3241845,"url":"http://www.bandsintown.com/venue/3241845","name":"Jeffrey Foucault at Shine Gathering Place","city":"Boulder","region":"CO","country":"United States","latitude":40.018463,"longitude":-105.278787},"ticket_status":"available","on_sale_datetime":"2016-03-02T13:00:00"},
+        {"id":11659345,"url":"http://www.bandsintown.com/event/11659345?app_id=making_the_band","datetime":"2016-04-07T19:00:00","ticket_url":"http://www.bandsintown.com/event/11659345/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"The Pitch Invasion","url":"http://www.bandsintown.com/ThePitchInvasion","mbid":null},{"name":"Strafgod","url":"http://www.bandsintown.com/Strafgod","mbid":null},{"name":"Fast Eddie","url":"http://www.bandsintown.com/FastEddie","mbid":"4a80dd86-e57e-4600-af53-1166bdc6d9b9"},{"name":"Chemical X","url":"http://www.bandsintown.com/ChemicalX","mbid":null}],"venue":{"id":1660969,"url":"http://www.bandsintown.com/venue/1660969","name":"Moon Room","city":"Denver","region":"CO","country":"United States","latitude":39.7391667,"longitude":-104.9841667},"ticket_status":"available","on_sale_datetime":"2016-03-14T13:35:12"},
+        {"id":11623000,"url":"http://www.bandsintown.com/event/11623000?app_id=making_the_band","datetime":"2016-04-07T19:00:00","ticket_url":"http://www.bandsintown.com/event/11623000/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Haley Reinhart","url":"http://www.bandsintown.com/HaleyReinhart","mbid":null},{"name":"Ben Rector","url":"http://www.bandsintown.com/BenRector","mbid":null},{"name":"Zach Heckendorf","url":"http://www.bandsintown.com/ZachHeckendorf","mbid":null}],"venue":{"id":713144,"url":"http://www.bandsintown.com/venue/713144","name":"Soiled Dove Underground","city":"Denver","region":"CO","country":"United States","latitude":39.718277,"longitude":-104.902392},"ticket_status":"available","on_sale_datetime":"2016-03-11T10:00:00"},
+        {"id":11688575,"url":"http://www.bandsintown.com/event/11688575?app_id=making_the_band","datetime":"2016-04-07T19:00:00","ticket_url":"http://www.bandsintown.com/event/11688575/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"YOUNG Amsterdam","url":"http://www.bandsintown.com/YoungAmsterdam","mbid":null}],"venue":{"id":1679154,"url":"http://www.bandsintown.com/venue/1679154","name":"Marquis Theater ","city":"Denver","region":"CO","country":"United States","latitude":39.7533607,"longitude":-104.9925461},"ticket_status":"available","on_sale_datetime":null},
+        {"id":11589791,"url":"http://www.bandsintown.com/event/11589791?app_id=making_the_band","datetime":"2016-04-07T19:00:00","ticket_url":"http://www.bandsintown.com/event/11589791/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Super8 \u0026 Tab","url":"http://www.bandsintown.com/Super8AndTab","mbid":"d644ba8a-ed79-4ec0-8afa-238a8f254140"},{"name":"DJ Mostro \"The Monster\"","url":"http://www.bandsintown.com/DjMostro%22theMonster%22","mbid":null}],"venue":{"id":695561,"url":"http://www.bandsintown.com/venue/695561","name":"Beta Nightclub","city":"Denver","region":"CO","country":"United States","latitude":39.753603,"longitude":-104.995429},"ticket_status":"available","on_sale_datetime":null},
+        {"id":11250361,"url":"http://www.bandsintown.com/event/11250361?app_id=making_the_band","datetime":"2016-04-07T19:00:00","ticket_url":"http://www.bandsintown.com/event/11250361/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Natalie Tate","url":"http://www.bandsintown.com/NatalieTate","mbid":null}],"venue":{"id":152840,"url":"http://www.bandsintown.com/venue/152840","name":"Lion's Lair","city":"Denver","region":"CO","country":"United States","latitude":39.739815,"longitude":-104.963108},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11682269,"url":"http://www.bandsintown.com/event/11682269?app_id=making_the_band","datetime":"2016-04-07T19:00:00","ticket_url":"http://www.bandsintown.com/event/11682269/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Big White","url":"http://www.bandsintown.com/BigWhite","mbid":null}],"venue":{"id":3189905,"url":"http://www.bandsintown.com/venue/3189905","name":"Juice Church","city":"Denver","region":"CO","country":"United States","latitude":39.7391667,"longitude":-104.9841667},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11808548,"url":"http://www.bandsintown.com/event/11808548?app_id=making_the_band","datetime":"2016-04-07T19:00:01","ticket_url":"http://www.bandsintown.com/event/11808548/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Golden Age","url":"http://www.bandsintown.com/GoldenAge","mbid":"79d0e99e-04c1-4548-acb3-6862be7feea5"}],"venue":{"id":3277822,"url":"http://www.bandsintown.com/venue/3277822","name":"The Little Bear ","city":"Evergreen","region":"CO","country":"United States","latitude":39.6333333,"longitude":-105.3166667},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11601689,"url":"http://www.bandsintown.com/event/11601689?app_id=making_the_band","datetime":"2016-04-07T19:30:00","ticket_url":"http://www.bandsintown.com/event/11601689/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Newsies the Musical Denver","url":"http://www.bandsintown.com/NewsiesTheMusicalDenver","mbid":null}],"venue":{"id":1234476,"url":"http://www.bandsintown.com/venue/1234476","name":"Buell Theatre","city":"Denver","region":"CO","country":"United States","latitude":39.74511,"longitude":-104.999306},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11615420,"url":"http://www.bandsintown.com/event/11615420?app_id=making_the_band","datetime":"2016-04-07T19:30:00","ticket_url":"http://www.bandsintown.com/event/11615420/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Open Blues Jam hosted by Eef and The Blues Express","url":"http://www.bandsintown.com/OpenBluesJamHostedByEefAndTheBluesExpress","mbid":null}],"venue":{"id":284391,"url":"http://www.bandsintown.com/venue/284391","name":"The Toad Tavern","city":"Littleton","region":"CO","country":"United States","latitude":39.619799,"longitude":-105.028173},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11093697,"url":"http://www.bandsintown.com/event/11093697?app_id=making_the_band","datetime":"2016-04-07T19:30:00","ticket_url":"http://www.bandsintown.com/event/11093697/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Richie Law","url":"http://www.bandsintown.com/RichieLaw","mbid":null}],"venue":{"id":1471962,"url":"http://www.bandsintown.com/venue/1471962","name":"Tailgate Tavern","city":"Parker","region":"CO","country":"United States","latitude":39.51852,"longitude":-104.76265},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11219143,"url":"http://www.bandsintown.com/event/11219143?app_id=making_the_band","datetime":"2016-04-07T19:30:00","ticket_url":"http://www.bandsintown.com/event/11219143/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Matt the Electrician","url":"http://www.bandsintown.com/MattTheElectrician","mbid":"6905bc46-c70d-441f-afc9-fbbeae3b5f78"}],"venue":{"id":277432,"url":"http://www.bandsintown.com/venue/277432","name":"Swallow Hill","city":"Denver","region":"CO","country":"United States","latitude":39.6679535,"longitude":-104.9866943},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11459788,"url":"http://www.bandsintown.com/event/11459788?app_id=making_the_band","datetime":"2016-04-07T19:30:00","ticket_url":"http://www.bandsintown.com/event/11459788/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Big Green Carpet","url":"http://www.bandsintown.com/BigGreenCarpet","mbid":null},{"name":"The Swifts","url":"http://www.bandsintown.com/TheSwifts","mbid":null},{"name":"Nate Hancock","url":"http://www.bandsintown.com/NateHancock","mbid":null},{"name":"The Declaration","url":"http://www.bandsintown.com/TheDeclaration","mbid":null},{"name":"Ubre Brown","url":"http://www.bandsintown.com/UbreBrown","mbid":null},{"name":"The Dream Train","url":"http://www.bandsintown.com/TheDreamTrain","mbid":null},{"name":"Underdog Overcome","url":"http://www.bandsintown.com/UnderdogOvercome","mbid":null},{"name":"Blue Moon Howl","url":"http://www.bandsintown.com/BlueMoonHowl","mbid":null}],"venue":{"id":1704430,"url":"http://www.bandsintown.com/venue/1704430","name":"Herman's Hideaway","city":"Denver","region":"CO","country":"United States","latitude":39.687973,"longitude":-104.987351},"ticket_status":"available","on_sale_datetime":"2016-02-17T13:20:09"},
+        {"id":11645137,"url":"http://www.bandsintown.com/event/11645137?app_id=making_the_band","datetime":"2016-04-07T19:30:00","ticket_url":"http://www.bandsintown.com/event/11645137/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Alice 105.9's AuNaturAlice 13","url":"http://www.bandsintown.com/Alice105.9%27sAunaturalice13","mbid":null}],"venue":{"id":1780362,"url":"http://www.bandsintown.com/venue/1780362","name":"The Soiled Dove Underground","city":"Denver","region":"CO","country":"United States","latitude":39.7391667,"longitude":-104.9841667},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11200234,"url":"http://www.bandsintown.com/event/11200234?app_id=making_the_band","datetime":"2016-04-07T19:30:00","ticket_url":"http://www.bandsintown.com/event/11200234/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Country","url":"http://www.bandsintown.com/Country","mbid":null},{"name":"for KING \u0026 COUNTRY","url":"http://www.bandsintown.com/ForKingAndCountry","mbid":null},{"name":"Kb","url":"http://www.bandsintown.com/Kb","mbid":"7bda6d74-e4ca-4d92-8bc7-37149b7664fe"}],"venue":{"id":1047633,"url":"http://www.bandsintown.com/venue/1047633","name":"1stBank Center","city":"Broomfield","region":"CO","country":"United States","latitude":39.904547,"longitude":-105.086449},"ticket_status":"available","on_sale_datetime":"2016-01-22T10:00:00"},
+        {"id":11446827,"url":"http://www.bandsintown.com/event/11446827?app_id=making_the_band","datetime":"2016-04-07T20:00:00","ticket_url":"http://www.bandsintown.com/event/11446827/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Templo Music","url":"http://www.bandsintown.com/TemploMusic","mbid":null}],"venue":{"id":9767,"url":"http://www.bandsintown.com/venue/9767","name":"Boulder Theater","city":"Boulder","region":"CO","country":"United States","latitude":40.018845,"longitude":-105.277326},"ticket_status":"available","on_sale_datetime":null},
+        {"id":11672119,"url":"http://www.bandsintown.com/event/11672119?app_id=making_the_band","datetime":"2016-04-07T20:00:00","ticket_url":"http://www.bandsintown.com/event/11672119/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Jeffrey Foucault","url":"http://www.bandsintown.com/JeffreyFoucault","mbid":"fb5efe24-591d-40a7-9587-36f44b21c2bd"}],"venue":{"id":1303775,"url":"http://www.bandsintown.com/venue/1303775","name":"Shine","city":"Boulder","region":"CO","country":"United States","latitude":40.018462,"longitude":-105.278819},"ticket_status":"available","on_sale_datetime":null},
+        {"id":11525186,"url":"http://www.bandsintown.com/event/11525186?app_id=making_the_band","datetime":"2016-04-07T20:00:00","ticket_url":"http://www.bandsintown.com/event/11525186/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Snog","url":"http://www.bandsintown.com/Snog","mbid":"d7a2ea77-0850-4480-8964-246c0a3d6efe"},{"name":"The Labrynth","url":"http://www.bandsintown.com/TheLabrynth","mbid":null},{"name":"Solypsis","url":"http://www.bandsintown.com/Solypsis","mbid":null},{"name":"Cozmos Mudwulf","url":"http://www.bandsintown.com/CozmosMudwulf","mbid":null},{"name":"bios+a+ic","url":"http://www.bandsintown.com/biosPlusaPlusic","mbid":null}],"venue":{"id":12658,"url":"http://www.bandsintown.com/venue/12658","name":"The Walnut Room","city":"Denver","region":"CO","country":"United States","latitude":39.764219,"longitude":-104.979776},"ticket_status":"available","on_sale_datetime":"2016-02-25T18:00:43"},
+        {"id":11710791,"url":"http://www.bandsintown.com/event/11710791?app_id=making_the_band","datetime":"2016-04-07T20:00:00","ticket_url":"http://www.bandsintown.com/event/11710791/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Reed Foehl","url":"http://www.bandsintown.com/ReedFoehl","mbid":"1ce9c0ef-afe0-415c-9598-dc84e2345251"}],"venue":{"id":1406067,"url":"http://www.bandsintown.com/venue/1406067","name":"Shine Restaurant and Gathering Place","city":"Boulder","region":"CO","country":"United States","latitude":40.0187151,"longitude":-105.2789573},"ticket_status":"available","on_sale_datetime":null},
+        {"id":11587697,"url":"http://www.bandsintown.com/event/11587697?app_id=making_the_band","datetime":"2016-04-07T20:00:00","ticket_url":"http://www.bandsintown.com/event/11587697/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"FL of The Foodchain","url":"http://www.bandsintown.com/FlOfTheFoodchain","mbid":null},{"name":"4:20 Jump Off","url":"http://www.bandsintown.com/4%3A20JumpOff","mbid":null},{"name":"Do or Die","url":"http://www.bandsintown.com/DoOrDie","mbid":"e32e0c8a-694f-49f4-844b-8ff5336f1b82"},{"name":"Ray Reed","url":"http://www.bandsintown.com/RayReed","mbid":null},{"name":"FL fdotlawless","url":"http://www.bandsintown.com/FlFdotlawless","mbid":null},{"name":"Smoked Out Ent.","url":"http://www.bandsintown.com/SmokedOutEnt.","mbid":null},{"name":"Jazz2kool","url":"http://www.bandsintown.com/Jazz2kool","mbid":null},{"name":"Hosted by DJ Simes Carter","url":"http://www.bandsintown.com/HostedByDjSimesCarter","mbid":null}],"venue":{"id":5235,"url":"http://www.bandsintown.com/venue/5235","name":"Marquis Theater","city":"Denver","region":"CO","country":"United States","latitude":39.753207,"longitude":-104.992523},"ticket_status":"available","on_sale_datetime":"2016-03-07T13:10:39"},
+        {"id":11597190,"url":"http://www.bandsintown.com/event/11597190?app_id=making_the_band","datetime":"2016-04-07T20:00:00","ticket_url":"http://www.bandsintown.com/event/11597190/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"the Still Tide","url":"http://www.bandsintown.com/TheStillTide","mbid":null}],"venue":{"id":152840,"url":"http://www.bandsintown.com/venue/152840","name":"Lion's Lair","city":"Denver","region":"CO","country":"United States","latitude":39.739815,"longitude":-104.963108},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11657863,"url":"http://www.bandsintown.com/event/11657863?app_id=making_the_band","datetime":"2016-04-07T20:00:00","ticket_url":"http://www.bandsintown.com/event/11657863/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"P O P F I L T E R","url":"http://www.bandsintown.com/POPFILTER","mbid":null}],"venue":{"id":29433,"url":"http://www.bandsintown.com/venue/29433","name":"Larimer Lounge","city":"Denver","region":"CO","country":"United States","latitude":39.7598,"longitude":-104.983749},"ticket_status":"available","on_sale_datetime":null},
+        {"id":11702689,"url":"http://www.bandsintown.com/event/11702689?app_id=making_the_band","datetime":"2016-04-07T20:00:00","ticket_url":"http://www.bandsintown.com/event/11702689/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Zeta June","url":"http://www.bandsintown.com/ZetaJune","mbid":null},{"name":"The Hastelhoffs","url":"http://www.bandsintown.com/TheHastelhoffs","mbid":null}],"venue":{"id":3061324,"url":"http://www.bandsintown.com/venue/3061324","name":"Globe Hall","city":"Denver","region":"CO","country":"United States","latitude":39.778064,"longitude":-104.982552},"ticket_status":"available","on_sale_datetime":"2016-03-21T09:20:06"},
+        {"id":11247268,"url":"http://www.bandsintown.com/event/11247268?app_id=making_the_band","datetime":"2016-04-07T20:00:00","ticket_url":"http://www.bandsintown.com/event/11247268/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Pete Yorn","url":"http://www.bandsintown.com/PeteYorn","mbid":"3533dea4-218c-4fc9-ab6e-2e3dc0ffde6e"}],"venue":{"id":2793,"url":"http://www.bandsintown.com/venue/2793","name":"Ogden Theatre","city":"Denver","region":"CO","country":"United States","latitude":39.740299,"longitude":-104.975288},"ticket_status":"available","on_sale_datetime":"2016-01-20T10:00:00"},
+        {"id":11565223,"url":"http://www.bandsintown.com/event/11565223?app_id=making_the_band","datetime":"2016-04-07T20:00:00","ticket_url":"http://www.bandsintown.com/event/11565223/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Lisa Landry","url":"http://www.bandsintown.com/LisaLandry","mbid":null}],"venue":{"id":1294400,"url":"http://www.bandsintown.com/venue/1294400","name":"The Oriental Theater","city":"Denver","region":"CO","country":"United States","latitude":39.7766702,"longitude":-105.0432933},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11541420,"url":"http://www.bandsintown.com/event/11541420?app_id=making_the_band","datetime":"2016-04-07T20:00:00","ticket_url":"http://www.bandsintown.com/event/11541420/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Zuli","url":"http://www.bandsintown.com/Zuli","mbid":null}],"venue":{"id":152840,"url":"http://www.bandsintown.com/venue/152840","name":"Lion's Lair","city":"Denver","region":"CO","country":"United States","latitude":39.739815,"longitude":-104.963108},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11529676,"url":"http://www.bandsintown.com/event/11529676?app_id=making_the_band","datetime":"2016-04-07T20:00:00","ticket_url":"http://www.bandsintown.com/event/11529676/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"The 24th Street Wailers","url":"http://www.bandsintown.com/The24thStreetWailers","mbid":null}],"venue":{"id":1837011,"url":"http://www.bandsintown.com/venue/1837011","name":"Ziggie's","city":"Denver","region":"CO","country":"United States","latitude":39.769546,"longitude":-105.050605},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11517414,"url":"http://www.bandsintown.com/event/11517414?app_id=making_the_band","datetime":"2016-04-07T20:00:00","ticket_url":"http://www.bandsintown.com/event/11517414/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Emily Clark \u0026 The Passing Fancy","url":"http://www.bandsintown.com/EmilyClarkAndThePassingFancy","mbid":null}],"venue":{"id":379494,"url":"http://www.bandsintown.com/venue/379494","name":"Cervantes","city":"Denver","region":"CO","country":"United States","latitude":39.754264,"longitude":-104.97896},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11618547,"url":"http://www.bandsintown.com/event/11618547?app_id=making_the_band","datetime":"2016-04-07T20:00:00","ticket_url":"http://www.bandsintown.com/event/11618547/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Omar Sosa Quarteto AfroCubano","url":"http://www.bandsintown.com/OmarSosaQuartetoAfrocubano","mbid":null}],"venue":{"id":348753,"url":"http://www.bandsintown.com/venue/348753","name":"Mount Vernon Country Club","city":"Golden","region":"CO","country":"United States","latitude":39.7195437,"longitude":-105.282265},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11394296,"url":"http://www.bandsintown.com/event/11394296?app_id=making_the_band","datetime":"2016-04-07T20:00:00","ticket_url":"http://www.bandsintown.com/event/11394296/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Kitchen Dwellers","url":"http://www.bandsintown.com/KitchenDwellers","mbid":null}],"venue":{"id":3180634,"url":"http://www.bandsintown.com/venue/3180634","name":"Bluebird Theater","city":"Denver","region":"CO","country":"United States","latitude":39.7402806,"longitude":-104.948382},"ticket_status":"available","on_sale_datetime":"2016-02-12T10:00:00"},
+        {"id":11264591,"url":"http://www.bandsintown.com/event/11264591?app_id=making_the_band","datetime":"2016-04-07T20:30:00","ticket_url":"http://www.bandsintown.com/event/11264591/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Spiritual Rez","url":"http://www.bandsintown.com/SpiritualRez","mbid":"db68873e-e08a-47cc-b491-ae7ff4dbd41d"},{"name":"Inna Di Red","url":"http://www.bandsintown.com/InnaDiRed","mbid":null},{"name":"Small Giants","url":"http://www.bandsintown.com/SmallGiants","mbid":null},{"name":"Stephen Hashbarger","url":"http://www.bandsintown.com/StephenHashbarger","mbid":null}],"venue":{"id":1141469,"url":"http://www.bandsintown.com/venue/1141469","name":"Moe's Original BBQ","city":"Englewood","region":"CO","country":"United States","latitude":39.655642,"longitude":-104.987704},"ticket_status":"available","on_sale_datetime":"2015-12-14T13:15:55"},
+        {"id":11776521,"url":"http://www.bandsintown.com/event/11776521?app_id=making_the_band","datetime":"2016-04-07T21:00:00","ticket_url":"http://www.bandsintown.com/event/11776521/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Super Eight","url":"http://www.bandsintown.com/SuperEight","mbid":"a4598aa1-32a8-43d7-acd5-9a96764ee28e"},{"name":"Tab","url":"http://www.bandsintown.com/Tab","mbid":"47eb1132-d394-49db-846d-f33081bf7478"}],"venue":{"id":302061,"url":"http://www.bandsintown.com/venue/302061","name":"Beta","city":"Denver","region":"CO","country":"United States","latitude":39.753603,"longitude":-104.995429},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11737982,"url":"http://www.bandsintown.com/event/11737982?app_id=making_the_band","datetime":"2016-04-07T21:00:00","ticket_url":"http://www.bandsintown.com/event/11737982/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Mr. Charlie","url":"http://www.bandsintown.com/Mr.Charlie","mbid":null}],"venue":{"id":754054,"url":"http://www.bandsintown.com/venue/754054","name":"Quixote's True Blue","city":"Denver","region":"CO","country":"United States","latitude":39.736858,"longitude":-104.983147},"ticket_status":"available","on_sale_datetime":null},
+        {"id":11668866,"url":"http://www.bandsintown.com/event/11668866?app_id=making_the_band","datetime":"2016-04-07T21:00:00","ticket_url":"http://www.bandsintown.com/event/11668866/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"So What! The Club","url":"http://www.bandsintown.com/SoWhat%21TheClub","mbid":null},{"name":"DJ Big Styles","url":"http://www.bandsintown.com/DjBigStyles","mbid":null}],"venue":{"id":2671403,"url":"http://www.bandsintown.com/venue/2671403","name":"Ophelia's Electric Soapbox","city":"Denver","region":"CO","country":"United States","latitude":39.752685,"longitude":-104.991849},"ticket_status":"available","on_sale_datetime":"2016-03-07T09:39:28"},
+        {"id":11250835,"url":"http://www.bandsintown.com/event/11250835?app_id=making_the_band","datetime":"2016-04-07T21:00:00","ticket_url":"http://www.bandsintown.com/event/11250835/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"William Singe","url":"http://www.bandsintown.com/WilliamSinge","mbid":null}],"venue":{"id":746674,"url":"http://www.bandsintown.com/venue/746674","name":"Gothic Theatre","city":"Englewood","region":"CO","country":"United States","latitude":39.657338,"longitude":-104.987824},"ticket_status":"available","on_sale_datetime":"2016-01-22T10:00:00"},
+        {"id":11315349,"url":"http://www.bandsintown.com/event/11315349?app_id=making_the_band","datetime":"2016-04-07T21:00:00","ticket_url":"http://www.bandsintown.com/event/11315349/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Genna","url":"http://www.bandsintown.com/Genna","mbid":null},{"name":"Jesse","url":"http://www.bandsintown.com/Jesse","mbid":"056afdd7-c58b-4522-8761-03ba433cfcd7"}],"venue":{"id":291754,"url":"http://www.bandsintown.com/venue/291754","name":"Laughing Goat","city":"Boulder","region":"CO","country":"United States","latitude":40.019367,"longitude":-105.273328},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11442589,"url":"http://www.bandsintown.com/event/11442589?app_id=making_the_band","datetime":"2016-04-07T21:00:00","ticket_url":"http://www.bandsintown.com/event/11442589/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Duane Peters","url":"http://www.bandsintown.com/DuanePeters","mbid":"b8d4ac77-4277-4130-832a-f5c27d2c75fb"},{"name":"\"Surf N Turf\"","url":"http://www.bandsintown.com/%22surfNTurf%22","mbid":null}],"venue":{"id":1053097,"url":"http://www.bandsintown.com/venue/1053097","name":"Lost Lake Lounge","city":"Denver","region":"CO","country":"United States","latitude":39.740103,"longitude":-104.9448623},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":10295976,"url":"http://www.bandsintown.com/event/10295976?app_id=making_the_band","datetime":"2016-04-07T21:00:00","ticket_url":"http://www.bandsintown.com/event/10295976/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Whitewater Ramble","url":"http://www.bandsintown.com/WhitewaterRamble","mbid":null},{"name":"Emily Clark","url":"http://www.bandsintown.com/EmilyClark","mbid":null},{"name":"The Passing Fancy","url":"http://www.bandsintown.com/ThePassingFancy","mbid":null},{"name":"The Applebutter Express","url":"http://www.bandsintown.com/TheApplebutterExpress","mbid":null}],"venue":{"id":2680576,"url":"http://www.bandsintown.com/venue/2680576","name":"Cervantes' Other Side","city":"Denver","region":"CO","country":"United States","latitude":39.754434,"longitude":-104.978614},"ticket_status":"available","on_sale_datetime":"2015-10-05T10:47:35"},
+        {"id":11719598,"url":"http://www.bandsintown.com/event/11719598?app_id=making_the_band","datetime":"2016-04-07T21:00:00","ticket_url":"http://www.bandsintown.com/event/11719598/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Matt Spinks","url":"http://www.bandsintown.com/MattSpinks","mbid":null}],"venue":{"id":3063381,"url":"http://www.bandsintown.com/venue/3063381","name":"Bar Louie DTC","city":"Greenwood Village","region":"CO","country":"United States","latitude":39.6237144,"longitude":-104.8960114},"ticket_status":"unavailable","on_sale_datetime":null},
+        {"id":11807722,"url":"http://www.bandsintown.com/event/11807722?app_id=making_the_band","datetime":"2016-04-07T21:00:00","ticket_url":"http://www.bandsintown.com/event/11807722/buy_tickets?app_id=making_the_band\u0026came_from=233","artists":[{"name":"Noche de Trova","url":"http://www.bandsintown.com/NocheDeTrova","mbid":null}],"venue":{"id":1004022,"url":"http://www.bandsintown.com/venue/1004022","name":"The Living Room","city":"Denver","region":"CO","country":"United States","latitude":39.733052,"longitude":-104.987438},"ticket_status":"unavailable","on_sale_datetime":null}]
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:02 GMT
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=Denver,%20CO&language=en&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 07 Apr 2016 17:12:03 GMT
+      Expires:
+      - Fri, 08 Apr 2016 17:12:03 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '448'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.6002959
+                       },
+                       "southwest" : {
+                          "lat" : 39.614431,
+                          "lng" : -105.109927
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7392358,
+                       "lng" : -104.990251
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.6002959
+                       },
+                       "southwest" : {
+                          "lat" : 39.614431,
+                          "lng" : -105.109927
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJzxcfI6qAa4cR1jaKJ_j0jhE",
+                 "types" : [ "locality", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:03 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9516/session/4a74af758e2c6af93a5b3db7c4a13f53/element/0.01964470655821926-2/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"4a74af758e2c6af93a5b3db7c4a13f53","status":0,"value":null}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:04 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9516/session/4a74af758e2c6af93a5b3db7c4a13f53/url
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '529'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"4a74af758e2c6af93a5b3db7c4a13f53","status":26,"value":{"message":"unexpected
+        alert open: {Alert text : This page was unable to display a Google Maps element.
+        Please contact the site administrator. If you are the administrator of this
+        site, please check the JavaScript console or check the following page for
+        troubleshooting: http://g.co/mapsJSApiErrors}\n  (Session info: chrome=49.0.2623.110)\n  (Driver
+        info: chromedriver=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4),platform=Mac
+        OS X 10.11.3 x86_64)"}}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 17:12:04 GMT
+recorded_with: VCR 3.0.1

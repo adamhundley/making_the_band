@@ -1,3 +1,89 @@
 // Place all the styles related to the shows controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.searchbar_label {
+  margin-top: -10px;
+}
+
+.artist-info {
+  margin-top: -50px;
+}
+.artist-info-name {
+  margin-top: 20px;
+}
+
+table {
+        width: 100%;
+    }
+
+thead.shows, tbody.shows, tr.shows, td.shows, th.shows { display: block; }
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+thead th {
+    height: 30px;
+
+    /*text-align: left;*/
+}
+
+tbody {
+    height: 250px;
+    overflow-y: auto;
+}
+
+thead {
+    /* fallback */
+}
+
+tbody td.rsvp, thead th.rsvp {
+  width: 7%;
+  float: left;
+}
+
+tbody td.tickets, thead th.tickets {
+  width: 7%;
+  float: left;
+}
+
+tbody td.date, thead th.date {
+  width: 15%;
+  float: left;
+}
+tbody td.venue, thead th.venue {
+  width: 25%;
+  float: left;
+}
+tbody td.location, thead th.location {
+  width: 19%;
+  float: left;
+}
+tbody td.artist, thead th.artist {
+  width: 27%;
+  float: left;
+}
+
+tbody td.artist_rsvp, thead th.artist_rsvp {
+  width: 10%;
+  float: left;
+}
+tbody td.artist_tickets, thead th.artist_tickets {
+  width: 10%;
+  float: left;
+}
+tbody td.artist_date, thead th.artist_date {
+  width: 15%;
+  float: left;
+}
+tbody td.artist_venue, thead th.artist_venue {
+  width: 35%;
+  float: left;
+}
+tbody td.artist_location, thead th.artist_location {
+  width: 30%;
+  float: left;
+}

@@ -17,7 +17,6 @@ class Show
 
   def initialize(show)
     @datetime = show[:datetime]
-    @formatted_datetime = show[:formatted_datetime]
     @title = show[:title]
     @ticket_url = show[:ticket_url]
     @url = show[:url]
@@ -51,6 +50,10 @@ class Show
 
   def self.service
     BitService.new
+  end
+
+  def formatted_datetime
+    datetime.to_date.strftime("%m/%d/%y")
   end
 
 private

@@ -11,6 +11,8 @@ gem 'omniauth-facebook'
 gem 'figaro'
 gem 'faraday'
 gem 'geocoder'
+gem 'simplecov', :require => false, :group => :test
+
 
 group :development, :test do
   gem 'byebug'
@@ -20,6 +22,14 @@ group :development, :test do
   gem 'launchy'
   gem 'database_cleaner'
   gem "factory_girl_rails", "~> 4.0"
+  gem 'selenium-webdriver', '~> 2.53'
+  gem "chromedriver-helper"
+end
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
+  gem 'capybara-bootstrap-datepicker'
 end
 
 group :development do
