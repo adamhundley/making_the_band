@@ -11,7 +11,9 @@ class Show
               :venue_latitude,
               :venue_longitude,
               :datetime,
-              :url, :city, :region
+              :url,
+              :city,
+              :region
 
   def initialize(show)
     @datetime = show[:datetime]
@@ -32,8 +34,13 @@ class Show
   end
 
   def self.find_by(params)
-    shows = service.shows(params)
-    build_objects(shows)
+    if !params[:start].nil?
+      date_params(params)
+    end
+    show_data = service.shows(params)
+    shows = build_objects(show_data)
+    shows.geo_info = get_geo_info(shows)
+    shows
   end
 
   def self.build_objects(shows)
@@ -46,4 +53,16 @@ class Show
     BitService.new
   end
 
+private
+
+  def self.date_params(params)
+    params[:date] = params[:start],params[:end]
+    params[:date] = params[:date].join(",")
+  end
+
+  def self.get_geo_info(shows)
+    shows.map do |show|
+      [show.venue_latitude, show.venue_longitude]
+    end
+  end
 end

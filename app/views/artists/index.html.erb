@@ -1,11 +1,12 @@
 <div class="container">
+  <%= render partial: "shared/artist_searchbar" %>
   <div class="row text-center">
     <div class="col-sm-5">
       <h1><%= link_to @artist.name, @artist.facebook_url %></h1>
       <%= link_to image_tag(@artist.thumb_url), @artist.facebook_url %>
     </div>
     <div class="col-sm-7">
-      <%= render partial: "shared/map" %>
+      <%= render partial: "shared/artist_map" %>
     </div>
   </div>
   <table class="table">

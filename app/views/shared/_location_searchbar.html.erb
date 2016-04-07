@@ -1,0 +1,34 @@
+<div class="container">
+  <h1 class="text-center">Search by City/State, Radius or Date Range</h1>
+  <form role="form" action='/shows' method="get">
+    <div class="col-sm-3 col-sm-offset-1">
+      <div class="form-group" id="location" >
+        <input type="text" name="[show][location]" class="form-control" id="location" value="<%= params[:show][:location] %>" placeholder="Enter City, State" required=>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="form-group">
+        <%= number_field_tag "[show][radius]", value=params[:show][:radius], class:"form-control form-control-success pull-left", max: 150, placeholder: "Radius", value:params[:show][:radius] %>
+      </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" class="form-control" name="[show][start]" id="checkin" value="<%= params[:show][:start] %>" placeholder="Start Date" required>
+            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" class="form-control" name="[show][end]" id="checkout" value="<%= params[:show][:end] %>" placeholder="End Date" required>
+            <span class="input-group-addon" style="padding-right: 8px"><i class="glyphicon glyphicon-calendar"></i></span>
+          </div>
+        </div>
+      </div>
+    <div class="col-sm-1">
+      <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+  </form>
+</div>

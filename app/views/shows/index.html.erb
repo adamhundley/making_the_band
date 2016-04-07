@@ -1,6 +1,6 @@
 
-<%= render partial: "shared/searchbar" %>
-<%= render partial: "shared/map" %>
+<%= render partial: "shared/location_searchbar" %>
+<%= render partial: "shared/shows_map" %>
 <div class="container">
   <div class="row text-center">
     <div class="col-sm-5">
@@ -19,7 +19,7 @@
       <th>Tickets</th>
       <th>RSVP</th>
     </thead>
-    <% @shows.each do |show| %>
+    <% @location.shows.each do |show| %>
     <tr>
       <td><%= show.datetime %></td>
       <td><%= show.artist %></td>
