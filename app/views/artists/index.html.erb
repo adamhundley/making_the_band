@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id='artist-container' data-artist='<%= @artist.name %>'>
   <%= render partial: "shared/artist_searchbar" %>
   <div class="row text-center">
     <div class="col-sm-5 artist-info-name">
@@ -19,16 +19,7 @@
         <th class="artist_rsvp shows">RSVP</th>
       </tr>
     </thead>
-    <tbody class="shows">
-      <% @artist.shows.each do |show| %>
-      <tr class="shows">
-        <td class="artist_date shows"><%= show.formatted_datetime %></td>
-        <td class="artist_venue shows"><%= show.venue_name %></td>
-        <td class="artist_location shows"><%= show.formatted_location %></td>
-        <td class="artist_tickets shows"><%= link_to "Tickets", show.ticket_url %></td>
-        <td class="artist_rsvp shows"><%= link_to "RSVP", show.facebook_rsvp_url %></td>
-      </tr>
-      <% end %>
+    <tbody class="shows-body">
     </tbody>
   </table>
   <hr>

@@ -9,6 +9,14 @@ describe "user searches for a location" do
 
       expect(current_path).to eq locations_path
       expect(page).to have_content("Denver, CO")
+
+      fill_in "location", with: "Wheeling, WV"
+      fill_in "checkin", with: "2016-04-07"
+      fill_in "checkout", with: "2016-04-09"
+      click_on "Search"
+
+      expect(current_path).to eq locations_path
+      expect(page).to have_content("Wheeling, WV")
     end
   end
 end

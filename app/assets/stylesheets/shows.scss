@@ -16,7 +16,7 @@ table {
         width: 100%;
     }
 
-thead.shows, tbody.shows, tr.shows, td.shows, th.shows { display: block; }
+thead.shows, tbody.shows-body, tr.shows, td.shows, th.shows { display: block; }
 
 tr:after {
     content: ' ';

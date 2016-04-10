@@ -1,9 +1,9 @@
-<div class="hero-unit">
+<div id='search' class="hero-unit">
   <div class="container hero-container">
     <h1 class="text-center"><span>Who/Where</span></h1>
     <div class="form-inline search-form">
       <div class="col-sm-4 col-sm-offset-2">
-        <%= form_tag('/artists', method:"get") do %>
+        <%= form_tag('/artists', method:"get", id: "artist-search") do %>
         <%= text_field :artist, :artist, class:"form-control form-control-success", placeholder: "Artist Name" , required: true %>
         <%= submit_tag "FIND BY ARTIST", class:"btn btn-success" %>
         <% end %>
@@ -16,4 +16,6 @@
       </div>
     </div>
   </div>
+</div>
+<div id='results'>
 </div>
